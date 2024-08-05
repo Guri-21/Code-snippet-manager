@@ -1,1 +1,2 @@
-# Code-snippet-manager
+# SnipX
+A versatile Code Snippet Manager
