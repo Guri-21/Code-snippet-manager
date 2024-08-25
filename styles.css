@@ -110,6 +110,7 @@ body {
     background-color: #f9f9f9; 
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
+    width: 325px;
 }
 
 .snippet-description {
