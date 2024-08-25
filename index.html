@@ -1,57 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnipX - Code Snippet Manager</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">SnipX</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Favourites</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="search-bar">
-            <input type="text" placeholder="Search snippets, tags...">
-            <button type="submit">Search</button>
-        </div>
-        <button class="create-snippet-btn">+ New Snippet</button>
-    </nav>
-
-    <!-- Content -->
-    <section class="content">
-        <!-- Example of a snippet card -->
-        <div class="snippet-card">
-            <div class="snippet-header">
-                <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-                <div>
-                    <h3 class="snippet-title">My First Snippet</h3>
-                    <p class="username">by username</p>
-                    <span class="timestamp">2 hours ago</span>
+    <html lang = "en">
+        <head>
+            <meta charset = "UTF-8">
+            <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+            <title> SnipX - Code Snippet Manager </title>
+            <link rel = "stylesheet" href = "styles.css">
+        </head>
+        <body>
+            <nav class = "navbar">
+                <div class = "logo"> SnipX </div>
+                <ul class = "nav-links">
+                    <li><a href = "#"> Home </a></li>
+                    <li><a href = "#"> Explore </a></li>
+                    <li><a href = "#"> Favourites </a></li>
+                    <li><a href = "#"> Newsletter </a></li>
+                    <li><a href = "#"> Contact </a></li>
+                </ul>
+                <div class = "search-bar">
+                    <input type = "text" placeholder = "Search snippets, tags...">
+                    <button type = "submit"> Search </button>
                 </div>
-            </div>
-            <div class="snippet-body">
-                <pre><code class="snippet-code">
-// Your code snippet here
-function helloWorld() {
-    console.log('Hello, world!');
-}
-                </code></pre>
-                <p class="snippet-description">This is a simple hello world function in JavaScript.</p>
-                <p class="snippet-tags">#javascript #beginner</p>
-            </div>
-            <div class="snippet-footer">
-                <button class="like-btn">Like</button>
-                <button class="save-btn">Save</button>
-                <button class="share-btn">Share</button>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+                <button class = "create-snippet-btn"> + New Snippet </button>
+            </nav>
+            <section class = "content">
+                <div class = "snippet-card">
+                    <div class = "snippet-header">
+                        <img src = "profile-pic.jpg" alt = "Profile Picture" class = "profile-pic">
+                        <div>
+                            <h3 class = "snippet-title"> My First Snippet </h3>
+                            <p class = "username"> by username </p>
+                            <span class = "timestamp"> 2 hours ago </span>
+                        </div>
+                    </div>
+                    <div class = "snippet-body">
+                        <pre>
+                            <code class = "snippet-code">
+                            // Your code snippet here
+                            function helloWorld() {
+                                console.log('Hello, world!');
+                            }
+                            </code>
+                        </pre>
+                        <p class = "snippet-description"> This is a simple hello world function in JavaScript. </p>
+                        <p class = "snippet-tags"> #javascript #beginner </p>
+                    </div>
+                    <div class = "snippet-footer">
+                        <button class = "like-btn"> Like </button>
+                        <button class = "save-btn"> Save </button>
+                        <button class = "share-btn"> Share </button>
+                    </div>
+                </div>
+            </section>
+        </body>
+    </html>
