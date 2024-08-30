@@ -15,11 +15,11 @@ body{
 
 .navbar {
 	background-color: #262424;
-	color: #d7f0ae;
+	color: #a1ff14;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	width: 300px;
+	width: 275px;
 	height: 728px;
 }
 
@@ -41,8 +41,12 @@ body{
     margin: 1px 15px 5px 15px;
 }
 
+.navbar .nav-links button {
+    margin: 0 auto;
+}
+
 .navbar .nav-links a {
-    color: #d7f0ae;
+    color: #a1ff14;
     text-decoration: none;
 	font-size: 25px;
 }
@@ -51,23 +55,23 @@ body{
 	padding: 10px;
 }
 
+.nav-list{
+	text-align: center;
+}
 a {
-	font-size: 12px;
 	font-weight: bold;
-	margin-top: 10px;
-	display: inline-block;
-	text-decoration: none;
 	color: #008a68;
 }
 
 .navbar .nav-links #login{
-	border: 1px solid #d7f0ae;
+	border: 1px solid #a1ff14;
 	border-radius: 20px;
 }
 
 .navbar .nav-links a:hover{
-	color: #90c042;
+	color: #c0ff14;
 }
+
 
 .button {
 	width: 110px;
@@ -76,7 +80,7 @@ a {
 	align-items: center;
 	justify-content: flex-start;
 	gap: 10px;
-	background-color: rgb(161, 255, 20);
+	background-color: #a1ff14;
 	border-radius: 30px;
 	color: rgb(19, 19, 19);
 	font-weight: 600;
@@ -95,9 +99,7 @@ a {
 }
 
 .svgIconHome {
-	margin-bottom: 20px;
-	visibility: hidden;
-	height: 25px;
+	height: 20px;
 	transition-duration: 1.5s;
 }
 
@@ -106,7 +108,7 @@ a {
 }
 
 .button:hover {
-	background-color: rgb(192, 255, 20);
+	background-color: #c0ff14;
 	transition-duration: .5s;
 }
 
@@ -121,10 +123,62 @@ a {
 }
 
 .button:hover .svgIconHome {
-	transform: translateY(10px);
+	transform: scale(1.2);
 	transition-duration: 1.5s;
 	visibility: visible;
 }
+
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn-Container {
+	display: flex;
+	width: 200px;
+	height: fit-content;
+	background-color: #1d2129;
+	border-radius: 40px;
+	box-shadow: 0px 5px 7px #bebebe;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+	cursor: pointer;
+  }
+  .icon-Container {
+	width: 45px;
+	height: 45px;
+	background-color: #a1ff14;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: 3px solid #1d2129;
+  }
+  .text {
+	width: calc(190px - 35px);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 1.1em;
+	letter-spacing: 1.2px;
+  }
+  .icon-Container svg {
+	transition-duration: 1.5s;
+  }
+  .Btn-Container:hover .icon-Container svg {
+	transition-duration: 1.5s;
+	animation: arrow 1s linear infinite;
+  }
+  @keyframes arrow {
+	0% {
+	  opacity: 0;
+	  margin-left: 0px;
+	}
+	100% {
+	  opacity: 1;
+	  margin-left: 10px;
+	}
+  }
+  
 
   
   
