@@ -6,6 +6,7 @@
 
 body{
 	font-family: Arial, sans-serif;
+	background: purple;
 }
 
 ::selection{
@@ -17,14 +18,14 @@ body{
 	color: #d7f0ae;
 	padding: 10px;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 70px;
+	flex-direction: column;
+	width: 300px;
+	height: 728px;
 }
 
 .navbar .logo {
-	margin-left: 10px;
-    font-size: 24px;
+	margin: 100px auto;
+    font-size: 40px;
     font-weight: bold;
 	cursor: pointer;
 }
@@ -32,6 +33,8 @@ body{
 .navbar .nav-links {
     list-style: none;
     display: flex;
+	flex-direction: column;
+	margin: 0 auto;
 }
 
 .navbar .nav-links li {
@@ -41,11 +44,20 @@ body{
 .navbar .nav-links a {
     color: #d7f0ae;
     text-decoration: none;
-	font-size: 15px;
+	font-size: 25px;
 }
 
 .navbar .nav-links a{
 	padding: 10px;
+}
+
+a {
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 10px;
+	display: inline-block;
+	text-decoration: none;
+	color: #008a68;
 }
 
 .navbar .nav-links #login{
@@ -57,334 +69,62 @@ body{
 	color: #90c042;
 }
 
-.navbar .search-bar input {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 20px;
-    width: 400px;
-}
-
-.navbar .search-bar button {
-	padding: 5px 10px;
+.button {
+	width: 110px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	background-color: rgb(161, 255, 20);
+	border-radius: 30px;
+	color: rgb(19, 19, 19);
+	font-weight: 600;
 	border: none;
-	background-color: #555;
-	color: #fff;
-	border-radius: 3px;
+	position: relative;
 	cursor: pointer;
+	transition-duration: .2s;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+	padding-left: 8px;
+	transition-duration: .5s;
 }
 
-.navbar .create-snippet-btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+.svgIconExplore {
+	height: 25px;
+	transition-duration: 1.5s;
 }
 
-.content {
-    padding: 20px;
+.svgIconHome {
+	margin-bottom: 20px;
+	visibility: hidden;
+	height: 25px;
+	transition-duration: 1.5s;
 }
 
-.snippet-card {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.bell path {
+	fill: rgb(19, 19, 19);
 }
 
-.snippet-header {
-    display: flex;
-    align-items: center;
+.button:hover {
+	background-color: rgb(192, 255, 20);
+	transition-duration: .5s;
 }
 
-.snippet-header .profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+.button:active {
+	transform: scale(0.97);
+	transition-duration: .2s;
 }
 
-.snippet-title {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
+.button:hover .svgIconExplore {
+	transform: rotate(250deg);
+	transition-duration: 1.5s;
 }
 
-.username {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
+.button:hover .svgIconHome {
+	transform: translateY(10px);
+	transition-duration: 1.5s;
+	visibility: visible;
 }
 
-.timestamp {
-    font-size: 12px;
-    color: #999;
-}
-
-.snippet-body {
-    margin-top: 15px;
-}
-
-.snippet-code {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.snippet-description {
-    margin: 10px 0;
-    color: #333;
-}
-
-.snippet-tags {
-    font-size: 14px;
-    color: #666;
-}
-
-.snippet-footer {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-}
-
-.snippet-footer button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-h1 {
-    font-size: 14px;
-    font-weight: 400;
-    margin: 10px 0 0 0;
-    color: #888888;
-}
   
-a {
-	font-size: 12px;
-	font-weight: bold;
-	margin-top: 10px;
-	display: inline-block;
-	text-decoration: none;
-	color: #008a68;
-}
   
-svg {
-cursor: pointer;
-overflow: visible;
-width: 60px;
-}
-svg #heart {
-transform-origin: center;
-animation: animateHeartOut 0.3s linear forwards;
-}
-svg #main-circ {
-transform-origin: 29.5px 29.5px;
-}
-
-#checkbox {
-display: none;
-}
-
-#checkbox:checked + label svg #heart {
-transform: scale(0.2);
-fill: #e2264d;
-animation: animateHeart 0.3s linear forwards 0.25s;
-}
-#checkbox:checked + label svg #main-circ {
-transition: all 2s;
-animation: animateCircle 0.3s linear forwards;
-opacity: 1;
-}
-#checkbox:checked + label svg #grp1 {
-opacity: 1;
-transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp1 #oval1 {
-transform: scale(0) translate(0, -30px);
-transform-origin: 0 0 0;
-transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp1 #oval2 {
-transform: scale(0) translate(10px, -50px);
-transform-origin: 0 0 0;
-transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp2 {
-opacity: 1;
-transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp2 #oval1 {
-transform: scale(0) translate(30px, -15px);
-transform-origin: 0 0 0;
-transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp2 #oval2 {
-transform: scale(0) translate(60px, -15px);
-transform-origin: 0 0 0;
-transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp3 {
-opacity: 1;
-transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp3 #oval1 {
-transform: scale(0) translate(30px, 0px);
-transform-origin: 0 0 0;
-transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp3 #oval2 {
-transform: scale(0) translate(60px, 10px);
-transform-origin: 0 0 0;
-transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp4 {
-opacity: 1;
-transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp4 #oval1 {
-transform: scale(0) translate(30px, 15px);
-transform-origin: 0 0 0;
-transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp4 #oval2 {
-transform: scale(0) translate(40px, 50px);
-transform-origin: 0 0 0;
-transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp5 {
-opacity: 1;
-transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp5 #oval1 {
-transform: scale(0) translate(-10px, 20px);
-transform-origin: 0 0 0;
-transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp5 #oval2 {
-transform: scale(0) translate(-60px, 30px);
-transform-origin: 0 0 0;
-transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp6 {
-opacity: 1;
-transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp6 #oval1 {
-	transform: scale(0) translate(-30px, 0px);
-	transform-origin: 0 0 0;
-	transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp6 #oval2 {
-	transform: scale(0) translate(-60px, -5px);
-	transform-origin: 0 0 0;
-	transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp7 {
-	opacity: 1;
-	transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp7 #oval1 {
-	transform: scale(0) translate(-30px, -15px);
-	transform-origin: 0 0 0;
-	transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp7 #oval2 {
-	transform: scale(0) translate(-55px, -30px);
-	transform-origin: 0 0 0;
-	transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp2 {
-	opacity: 1;
-	transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp3 {
-	opacity: 1;
-	transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp4 {
-	opacity: 1;
-	transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp5 {
-	opacity: 1;
-	transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp6 {
-	opacity: 1;
-	transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp7 {
-	opacity: 1;
-	transition: 0.1s opacity 0.3s;
-}
-
-@keyframes animateCircle {
-	40% {
-		transform: scale(10);
-		opacity: 1;
-		fill: #dd4688;
-	}
-	55% {
-		transform: scale(11);
-		opacity: 1;
-		fill: #d46abf;
-	}
-	65% {
-		transform: scale(12);
-		opacity: 1;
-		fill: #cc8ef5;
-	}
-	75% {
-		transform: scale(13);
-		opacity: 1;
-		fill: transparent;
-		stroke: #cc8ef5;
-		stroke-width: 0.5;
-	}
-	85% {
-		transform: scale(17);
-		opacity: 1;
-		fill: transparent;
-		stroke: #cc8ef5;
-		stroke-width: 0.2;
-	}
-	95% {
-		transform: scale(18);
-		opacity: 1;
-		fill: transparent;
-		stroke: #cc8ef5;
-		stroke-width: 0.1;
-	}
-	100% {
-		transform: scale(19);
-		opacity: 1;
-		fill: transparent;
-		stroke: #cc8ef5;
-		stroke-width: 0;
-	}
-}
-@keyframes animateHeart {
-	0% {
-		transform: scale(0.2);
-	}
-	40% {
-		transform: scale(1.2);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-@keyframes animateHeartOut {
-	0% {
-		transform: scale(1.4);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
