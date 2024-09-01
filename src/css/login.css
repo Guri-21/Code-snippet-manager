@@ -404,3 +404,23 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+.close-btn {
+  position: fixed;
+  top: 100px;
+  right: 400px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
