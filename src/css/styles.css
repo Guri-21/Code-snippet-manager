@@ -8,7 +8,7 @@ html, body {
     overflow-y: auto;
     height: 100%;
     font-family: Arial, sans-serif;
-	background: purple;
+	background: #353839;
 }
 
 ::selection{
@@ -25,6 +25,7 @@ html, body {
 	height: 100vh;
 	transition: width 1s ease;
 	overflow: hidden;
+	position: fixed;
 }
 
 .navbar:hover{
