@@ -230,6 +230,13 @@ form.sign-in-form {
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+.btn.transparent:hover {
+  background-color: #262424; /* Background color on hover */
+  color: #a1ff14; /* Text color on hover */
+  border-color: #262424; /* Optional: border color on hover */
 }
 
 .right-panel .image,
