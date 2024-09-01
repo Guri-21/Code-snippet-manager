@@ -4,8 +4,10 @@
 	box-sizing: border-box;
 }
 
-body{
-	font-family: Arial, sans-serif;
+html, body {
+    overflow-y: auto;
+    height: 100%;
+    font-family: Arial, sans-serif;
 	background: purple;
 }
 
@@ -19,21 +21,36 @@ body{
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
+	width: 100px;
+	height: 100vh;
+	transition: width 1s ease;
+	overflow: hidden;
+}
+
+.navbar:hover{
 	width: 275px;
-	height: 728px;
+}
+
+.nav-no-hover{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
 }
 
 .navbar .logo {
-	margin: 100px auto;
-    font-size: 40px;
-    font-weight: bold;
-	cursor: pointer;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    cursor: pointer;
+	border-radius: 50%;
+	background: #262424;
+	position: relative;
 }
 
 .navbar .nav-links {
     list-style: none;
-    display: flex;
-	flex-direction: column;
+    display: none;
 	margin: 0 auto;
 }
 
@@ -58,9 +75,18 @@ body{
 .nav-list{
 	text-align: center;
 }
-a {
+
+.navbar:hover .nav-no-hover{
+	display: none;
+}
+
+.navbar:hover .nav-links{
+	display: flex;
+	flex-direction: column;
+}
+
+a{
 	font-weight: bold;
-	color: #008a68;
 }
 
 .navbar .nav-links #login{
@@ -71,7 +97,6 @@ a {
 .navbar .nav-links a:hover{
 	color: #c0ff14;
 }
-
 
 .button {
 	width: 110px;
@@ -93,14 +118,44 @@ a {
 	transition-duration: .5s;
 }
 
-.svgIconExplore {
-	height: 25px;
-	transition-duration: 1.5s;
-}
-
 .svgIconHome {
 	height: 20px;
 	transition-duration: 1.5s;
+	background-color: #a1ff14;
+	/* margin: 0 auto; */
+}
+
+.svgIconExplore {
+	height: 25px;
+	transition-duration: 1.5s;
+	background-color: #a1ff14;
+}
+
+.svgIconHomeOG {
+	width: 50px;
+	height: 50px;
+	background-color: #a1ff14;
+	border-radius: 45%;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+.svgIconExploreOG {
+	width: 50px;
+	height: 50px;
+	background-color: #a1ff14;
+	border-radius: 45%;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+.svgIconSignUpOG {
+	width: 50px;
+	height: 50px;
+	background-color: #a1ff14;
+	border-radius: 45%;
+	margin: 10px auto;
+	padding: 10px;
 }
 
 .bell path {
@@ -128,7 +183,6 @@ a {
 	visibility: visible;
 }
 
-/* From Uiverse.io by vinodjangid07 */ 
 .Btn-Container {
 	display: flex;
 	width: 200px;
@@ -140,8 +194,9 @@ a {
 	align-items: center;
 	border: none;
 	cursor: pointer;
-  }
-  .icon-Container {
+}
+
+.icon-Container {
 	width: 45px;
 	height: 45px;
 	background-color: #a1ff14;
@@ -150,8 +205,9 @@ a {
 	justify-content: center;
 	border-radius: 50%;
 	border: 3px solid #1d2129;
-  }
-  .text {
+}
+
+.text {
 	width: calc(190px - 35px);
 	height: 100%;
 	display: flex;
@@ -160,15 +216,18 @@ a {
 	color: white;
 	font-size: 1.1em;
 	letter-spacing: 1.2px;
-  }
-  .icon-Container svg {
+}
+
+.icon-Container svg {
 	transition-duration: 1.5s;
-  }
-  .Btn-Container:hover .icon-Container svg {
+}
+
+.Btn-Container:hover .icon-Container svg {
 	transition-duration: 1.5s;
 	animation: arrow 1s linear infinite;
-  }
-  @keyframes arrow {
+}
+
+@keyframes arrow {
 	0% {
 	  opacity: 0;
 	  margin-left: 0px;
@@ -177,7 +236,7 @@ a {
 	  opacity: 1;
 	  margin-left: 10px;
 	}
-  }
+}
   
 
   
