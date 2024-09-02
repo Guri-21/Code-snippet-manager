@@ -21,6 +21,7 @@ html, body {
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	width: 100px;
 	height: 100vh;
 	transition: width 1s ease;
@@ -35,7 +36,7 @@ html, body {
 .nav-no-hover{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	margin-bottom: 200px;
 	gap: 40px;
 }
 
@@ -261,6 +262,10 @@ a{
 	overflow: hidden;
 	position: relative;
 	height: 2.8em;
+<<<<<<< HEAD
+=======
+	top: 20px;
+>>>>>>> 6f157723618e4d04865ae911dabe40ac7538abc5
 	left: 500px;
 	padding-right: 3.3em;
 	cursor: pointer;
@@ -297,12 +302,24 @@ a{
   .cssbuttons-io-button:active .css-icon {
 	transform: scale(0.95);
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 6f157723618e4d04865ae911dabe40ac7538abc5
   .navbar:hover + .index-content{
 	margin-left: 200px;
 	transition: 1s ease;
   }
+<<<<<<< HEAD
   .horizontal-rule{
 	height: 10px;
 	background: #d3c8c2;
   }
+=======
+
+  .horizontal-rule{
+	height: 10px;
+	background: #d3c8c2;
+  }
+  
+>>>>>>> 6f157723618e4d04865ae911dabe40ac7538abc5
