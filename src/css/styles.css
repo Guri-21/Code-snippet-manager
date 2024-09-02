@@ -247,6 +247,9 @@ a{
 	font-weight: 800;
 	font-size: 50px;
 	margin: 20px 120px 0 120px;
+	position: fixed;
+	z-index: 999;
+	top: 1%;
 }
 .cssbuttons-io-button {
 	background: #262424;
