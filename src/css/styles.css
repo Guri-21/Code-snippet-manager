@@ -346,3 +346,10 @@ p{
 	font-size: 50px;
 	font-weight: 300;
 }
+#preloader{
+	background: #000 url(images/loading-azurlane.gif) no-repeat;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
