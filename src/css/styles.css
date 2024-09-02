@@ -251,6 +251,16 @@ a{
 	z-index: 999;
 	top: 1%;
 }
+.index-para1{
+	text-align: left;
+	color: #d3c8c2;
+	font-weight: 800;
+	font-size: 50px;
+	margin: 20px 120px 0 120px;
+	position: fixed;
+	z-index: 999;
+	top: 20%;
+}
 .cssbuttons-io-button {
 	background: #262424;
 	color: white;
@@ -307,7 +317,7 @@ a{
 	height: 10px;
 	background: #d3c8c2;
   }
-  .navbar:hover + iframe{
+  .navbar:hover + .index-content{
 	margin-left: 200px;
 	transition: 1s ease;
   }
@@ -319,6 +329,9 @@ a{
     height: 100%;
     z-index: -1;
     overflow: hidden;
+}
+.index-content{ 
+	background: transparent; 
 }
 p{
 	color: wheat;
