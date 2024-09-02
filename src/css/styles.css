@@ -320,3 +320,16 @@ a{
     z-index: -1;
     overflow: hidden;
 }
+p{
+	color: wheat;
+}
+.index-para{
+	font-family: 'Neue Montreal';
+	font-size: 4vw;
+	font-weight:500 ;
+}
+.index-para1{
+	font-family: 'Neue Montreal';
+	font-size: 50px;
+	font-weight: 300;
+}
