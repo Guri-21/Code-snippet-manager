@@ -10,7 +10,7 @@ input {
     margin: 80px auto;
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 1001;
     top: 1%;
     left: 25%;
 }
